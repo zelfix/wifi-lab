@@ -24,3 +24,9 @@ $ docker-compose up
 
 ### Default SSID
 wifi-lab-eap
+
+### Testing
+After connection check it with 
+```
+$ curl 192.168.254.1
+```
