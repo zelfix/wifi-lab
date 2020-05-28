@@ -26,17 +26,28 @@ driver=${DRIVER}
 ssid=${SSID}
 hw_mode=${HW_MODE}
 channel=${CHANNEL}
+
+auth_algs=1
+wpa_key_mgmt=WPA-EAP
 wpa=2
-wpa_passphrase=${WPA_PASSPHRASE}
-wpa_key_mgmt=WPA-PSK
-# TKIP is no secure anymore
-#wpa_pairwise=TKIP CCMP
+
+nas_identifier=other
+
+#FreeRADIUS Server Config
+auth_server_addr=127.0.0.1
+auth_server_port=1812
+auth_server_shared_secret=radiusPassword1234
+
 wpa_pairwise=CCMP
 rsn_pairwise=CCMP
 wpa_ptk_rekey=600
 ieee80211n=1
 ht_capab=${HT_CAPAB}
 wmm_enabled=1 
+
+#EAP Config 8021X
+own_ip_addr=127.0.0.1
+ieee8021x=1 
 EOF
 
 fi
