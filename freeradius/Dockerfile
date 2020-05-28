@@ -1,0 +1,1 @@
+FROM irasnyd/freeradius-ldap:latest
