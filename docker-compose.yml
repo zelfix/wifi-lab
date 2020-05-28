@@ -37,3 +37,4 @@ services:
         environment: 
             - "INTERFACE=wlp2s0"
             - "SSID=wifi-lab"
+            - "WPA_PASSPHRASE=passw0rd"
