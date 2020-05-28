@@ -1,0 +1,35 @@
+## FIRST Level hierarchy - people 
+## uses mixed upper and lower case for objectclass
+# this is an ENTRY sequence and is preceded by a BLANK line
+
+dn: ou=Users, dc=example,dc=org
+ou: Users
+description: All users in organisation
+objectclass: organizationalunit
+
+## SECOND Level hierarchy
+## ADD a single entry under FIRST (people) level
+# this is an ENTRY sequence and is preceded by a BLANK line
+# the ou: Human Resources is the department name
+
+dn: cn=John Snow,ou=Users,dc=example,dc=org
+objectclass: inetOrgPerson
+cn: John Snow
+sn: Snow
+uid: jsnow
+userpassword: password123
+homephone: 555-111-2222
+mail: jsnow@example.com
+description: swell guy
+ou: Human Resources
+
+dn: cn=Harry Potter,ou=Users,dc=example,dc=org
+objectclass: inetOrgPerson
+cn: Harry Potter
+sn: Potter
+uid: hpotter
+userpassword: Potter31
+homephone: 555-111-3333
+mail: hpotter@example.com
+description: scarface
+ou: CTO
