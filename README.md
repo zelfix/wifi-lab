@@ -1,7 +1,7 @@
 # EAP Wi-Fi lab
-This lab starts wireless access point (hostap) and dhcp server with WPA2-EAP-PSK authentication.
+This lab starts wireless access point (hostap) and dhcp server with WPA2-EAP-PEAP, WPA2-EAP-TTLS and WPA2-EAP-TLS authentication.
 
-EAP-TLS mode is still Work in Progress.
+You can install ca.pem certificate to you client device for radius server validation.
 
 ## Before start
 
@@ -26,7 +26,14 @@ $ docker-compose up
 wifi-lab-eap
 
 ### Testing
-After connection check it with 
+After connection you can check it with 
 ```
 $ curl 192.168.254.1
 ```
+
+Alternatively, you can check the connection using the eapol_test utility. http://deployingradius.com/scripts/eapol_test/
+```
+$ cd eap-test
+$ eapol_test -c ./peap-mshapv2.conf
+$ eapol_test -c ./tls.conf
+$ eapol_test -c ./ttls-pap.conf
