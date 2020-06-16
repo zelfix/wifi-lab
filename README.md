@@ -1,14 +1,14 @@
 # EAP Wi-Fi lab
 This lab starts wireless access point (hostap) and dhcp server with WPA2-EAP-PEAP, WPA2-EAP-TTLS and WPA2-EAP-TLS authentication.
 
-You can install ca.pem certificate to you client device for radius server validation.
+You can install ca.pem certificate to your client device for radius server validation.
 
 ## Before start
 
 - Edit the "INTERFACE" variable in the docker-compose.yml file.
 - Disable Wi-Fi interface.
 
-## Users credentials
+## User credentials
 
 |  Username 	|   Password  	|
 |:---------:	|:-----------:	|
