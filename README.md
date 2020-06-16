@@ -34,6 +34,6 @@ $ curl 192.168.254.1
 Alternatively, you can check the connection using the eapol_test utility. http://deployingradius.com/scripts/eapol_test/
 ```
 $ cd eap-test
-$ eapol_test -c ./peap-mshapv2.conf
-$ eapol_test -c ./tls.conf
-$ eapol_test -c ./ttls-pap.conf
+$ eapol_test -c ./peap-mshapv2.conf -s radiusPassword1234
+$ eapol_test -c ./tls.conf -s radiusPassword1234
+$ eapol_test -c ./ttls-pap.conf -s radiusPassword1234
